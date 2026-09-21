@@ -2,10 +2,10 @@
 Nom De Systeme : Blog
 
 # Identifier les acteurs et leurs objectifs
-Administrateur : gèrer les catégories et les auteurs ,valider les articles , publier les articles .
+Administrateur :  Gère le contenu .
 
-Auteur : rédiger des articles , gèrer son profil et son mot de passe .
+Auteur : Rédige et gère ses articles .
 
-Visiteur : consulter les articles publiés
+Visiteur : Consulte les articles publiés
 
 ![alt text](diagramme-user-case.png)
