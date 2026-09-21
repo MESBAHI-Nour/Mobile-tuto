@@ -7,3 +7,5 @@ Administrateur : gèrer les catégories et les auteurs ,valider les articles , p
 Auteur : rédiger des articles , gèrer son profil et son mot de passe .
 
 Visiteur : consulter les articles publiés
+
+![alt text](<Untitled diagram-2026-09-21-134341.png>)
