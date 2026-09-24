@@ -1,0 +1,26 @@
+flowchart LR
+
+    A["Cadrer<br><br>Gestion des catégories ?"]
+    B["Concevoir<br><br>Creer base de donnees"]
+    C["Développer<br><br>cree l'API (CRUD) <br> Connecter le<br>formulaire à l'API"]
+    D["Tester<br><br>Tester CRUD"]
+    E["Valider<br><br>Validee"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+
+    D -->|"Anomalie ?"| C
+
+    classDef  cadrer fill:#e0f0ff,stroke:#2196f3,stroke-width:2px,color:#111;
+    classDef concevoir fill:#fff0d9,stroke:#ff9800,stroke-width:2px,color:#111;
+    classDef developper fill:#fce4ec,stroke:#e91e63,stroke-width:2px,color:#111;
+    classDef tester fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px,color:#111;
+    classDef valider fill:#e8f5e9,stroke:#4caf50,stroke-width:2px,color:#111;
+
+    class A cadrer;
+    class B concevoir;
+    class C developper;
+    class D tester;
+    class E valider;
