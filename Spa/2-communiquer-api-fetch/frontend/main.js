@@ -30,6 +30,9 @@ function chargerCategories() {
                             <button type="button" onclick="modifierCategorie(${elt.id})">
                                 Modifier
                             </button>
+                            <button type="button" onclick="deleteCategorie(${elt.id})">
+                                Supprimer
+                            </button>
                         </td>
                     </tr>
                     `
@@ -43,7 +46,6 @@ function chargerCategories() {
 }
 
 
-// Modifier
 function modifierCategorie(id) {
 
     const categorie = categories.find(elt => elt.id == id);
@@ -58,8 +60,20 @@ function modifierCategorie(id) {
     }
 }
 
+function deleteCategorie(id){
+    const categorie = categories.find(elt => elt.id == id)
+    fetch(API_URL,{
+        method: "DELETE",
 
-// Ajouter ou modifier
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(categorie)
+    })
+}
+
+
 document.querySelector("#section-form").addEventListener("submit", event => {
 
     event.preventDefault();
@@ -77,8 +91,6 @@ document.querySelector("#section-form").addEventListener("submit", event => {
 
     let method = "POST";
 
-
-    // Si on est en mode modification
     if (ligneEnEdition !== null) {
 
         catg.id = ligneEnEdition.id;
@@ -97,7 +109,10 @@ document.querySelector("#section-form").addEventListener("submit", event => {
 
         body: JSON.stringify(catg)
 
-    })
+    }).then(response => response.json())
+    .then(result => 
+        chargerCategories()
+    )
 
     .then(response => response.json())
 
