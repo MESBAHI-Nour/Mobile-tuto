@@ -1,5 +1,5 @@
 <?php
-require_once '../../backend/classes/GestionCategorie.php';
+require_once '../backend/classes/GestionCategorie.php';
 header('Content-Type: application/json');
 class CategorieController {
     public function listerCategories(): void {
