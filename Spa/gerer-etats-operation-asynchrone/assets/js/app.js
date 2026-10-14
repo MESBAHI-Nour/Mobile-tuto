@@ -12,7 +12,6 @@ function setLoadingState(isLoading) {
     }
 }
 
-
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     setLoadingState(true);
